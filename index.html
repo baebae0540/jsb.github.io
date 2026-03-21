@@ -23,8 +23,6 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
   background:radial-gradient(ellipse,rgba(107,127,255,0.06) 0%,transparent 70%);
   z-index:0;pointer-events:none;}
 .wrap{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1;}
-
-/* NAV */
 nav{position:sticky;top:0;z-index:100;background:rgba(7,7,15,0.85);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--border);padding:14px 0;}
 .nav-inner{max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;}
@@ -33,8 +31,6 @@ nav{position:sticky;top:0;z-index:100;background:rgba(7,7,15,0.85);backdrop-filt
 .nav-links a{font-size:12px;color:var(--muted);text-decoration:none;font-family:'DM Mono',monospace;
   letter-spacing:0.05em;cursor:pointer;transition:color 0.2s;}
 .nav-links a:hover{color:var(--accent);}
-
-/* HERO */
 .hero{padding:80px 0 60px;border-bottom:1px solid var(--border);}
 .hero-top{display:flex;align-items:flex-start;gap:28px;margin-bottom:32px;}
 .avatar{width:68px;height:68px;border-radius:50%;
@@ -42,7 +38,6 @@ nav{position:sticky;top:0;z-index:100;background:rgba(7,7,15,0.85);backdrop-filt
   display:flex;align-items:center;justify-content:center;
   font-family:'DM Mono',monospace;font-size:20px;color:#fff;font-weight:500;flex-shrink:0;
   box-shadow:0 0 0 1px rgba(107,127,255,0.4),0 0 40px rgba(107,127,255,0.15);}
-.hero-text{}
 .badge-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;}
 .badge{font-family:'DM Mono',monospace;font-size:10px;font-weight:500;padding:3px 10px;border-radius:4px;letter-spacing:0.1em;}
 .badge-blue{color:var(--accent);background:rgba(107,127,255,0.1);border:1px solid rgba(107,127,255,0.25);}
@@ -57,21 +52,15 @@ h1{font-size:38px;font-weight:700;color:#fff;line-height:1.15;letter-spacing:-0.
 .stat-num{font-size:24px;font-weight:700;color:#fff;font-family:'DM Mono',monospace;}
 .stat-label{font-size:11px;color:var(--muted);margin-top:4px;}
 .contact-row{display:flex;gap:16px;margin-top:24px;flex-wrap:wrap;}
-.contact-item{font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);
-  display:flex;align-items:center;gap:6px;}
+.contact-item{font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px;}
 .cdot{width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;}
-
-/* SECTION */
 section{padding:52px 0 0;}
 .sec-label{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;
   color:var(--accent);letter-spacing:0.15em;text-transform:uppercase;
   margin-bottom:24px;display:flex;align-items:center;gap:12px;}
 .sec-label::after{content:'';flex:1;height:1px;background:var(--border);}
-
-/* STACK */
 .stack-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;}
-.sg{background:var(--surf);border:1px solid var(--border);border-radius:10px;padding:14px 16px;
-  transition:border-color 0.2s;}
+.sg{background:var(--surf);border:1px solid var(--border);border-radius:10px;padding:14px 16px;transition:border-color 0.2s;}
 .sg:hover{border-color:rgba(107,127,255,0.3);}
 .sg-label{font-family:'DM Mono',monospace;font-size:10px;font-weight:500;
   color:var(--accent2);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;}
@@ -80,8 +69,13 @@ section{padding:52px 0 0;}
   background:rgba(107,127,255,0.08);border:1px solid rgba(107,127,255,0.2);
   border-radius:3px;padding:2px 7px;white-space:nowrap;}
 .tag.hi{color:var(--accent2);border-color:rgba(167,139,250,0.35);background:rgba(167,139,250,0.08);}
-
-/* PROJECTS */
+.ai-list{display:flex;flex-direction:column;gap:10px;}
+.ai-card{background:var(--surf);border:1px solid rgba(251,191,36,0.2);border-radius:10px;
+  padding:18px 20px;display:flex;align-items:flex-start;gap:16px;transition:border-color 0.2s;}
+.ai-card:hover{border-color:rgba(251,191,36,0.4);}
+.ai-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
+.ai-title{font-size:14px;font-weight:500;color:#fff;margin-bottom:4px;}
+.ai-desc{font-size:13px;color:var(--muted);line-height:1.7;}
 .proj-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;}
 .pf-btn{font-family:'DM Mono',monospace;font-size:11px;padding:5px 12px;border-radius:5px;cursor:pointer;
   border:1px solid var(--border);background:transparent;color:var(--muted);transition:all 0.2s;}
@@ -108,14 +102,12 @@ section{padding:52px 0 0;}
   text-transform:uppercase;margin-bottom:8px;}
 .pb-items{list-style:none;display:flex;flex-direction:column;gap:4px;}
 .pb-items li{font-size:13px;color:var(--muted);padding-left:12px;position:relative;line-height:1.6;}
-.pb-items li::before{content:'—';position:absolute;left:0;color:var(--accent);font-size:11px;}
+.pb-items li::before{content:'--';position:absolute;left:0;color:var(--accent);font-size:11px;}
 .result-box{background:rgba(74,222,128,0.05);border:1px solid rgba(74,222,128,0.15);
   border-radius:6px;padding:10px 12px;font-size:13px;color:rgba(74,222,128,0.9);line-height:1.6;}
 .team-info{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-top:12px;}
 .proj-arrow{font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;
   margin-left:8px;transition:transform 0.2s;display:inline-block;}
-
-/* EDU / CERT */
 .edu-list{display:flex;flex-direction:column;gap:10px;}
 .cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;}
 .edu-card,.cert-card{background:var(--surf);border:1px solid var(--border);border-radius:10px;
@@ -128,15 +120,10 @@ section{padding:52px 0 0;}
   color:var(--accent);background:rgba(107,127,255,0.1);border:1px solid rgba(107,127,255,0.2);
   padding:2px 7px;border-radius:3px;margin-top:6px;}
 .ec-date{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);text-align:right;white-space:nowrap;flex-shrink:0;}
-
-/* FOOTER */
 footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
-  text-align:center;font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);
-  position:relative;z-index:1;}
-
+  text-align:center;font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);position:relative;z-index:1;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
 .hero{animation:fadeUp 0.5s ease both;}
-
 @media(max-width:640px){
   h1{font-size:28px;}
   .stat-row{grid-template-columns:repeat(2,1fr);}
@@ -155,6 +142,7 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
     <span class="nav-logo">JSB.dev</span>
     <div class="nav-links">
       <a href="#stack">Stack</a>
+      <a href="#ai" style="color:#fbbf24;">AI Tools</a>
       <a href="#projects">Projects</a>
       <a href="#education">Education</a>
       <a href="#certs">Certs</a>
@@ -164,25 +152,24 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
 
 <div class="wrap">
 
-  <!-- HERO -->
   <div class="hero">
     <div class="hero-top">
       <div class="avatar">전</div>
       <div class="hero-text">
         <div class="badge-row">
           <span class="badge badge-green">● OPEN TO WORK</span>
-          <span class="badge badge-blue">5년 3개월 경력</span>
-          <span class="badge badge-purple">제조 도메인 전문</span>
+          <span class="badge badge-blue">5년 9개월 경력</span>
+          <span class="badge badge-purple">MES/WMS 전문</span>
         </div>
         <h1>전상배</h1>
-        <div class="hero-role">Web Developer · 타스코 개발2팀 / 과장</div>
+        <div class="hero-role">Web Developer · 타스코 SF팀 / 과장</div>
         <p class="hero-summary">
           제약·식품·화학 등 생산 제조사업 분야의 MES/WMS/ERP I/F 시스템 구축 전문가.
           MSSQL Stored Procedure 기반 개발과 설비 데이터 인터페이스 구현 경험을 보유하며,
           14개 스마트 공장 구축 프로젝트를 성공적으로 수행했습니다.
         </p>
         <div class="contact-row">
-          <span class="contact-item"><span class="cdot"></span>baebae0540@gmail.com</span>
+          <span class="contact-item"><span class="cdot"></span>wjstkdqo002@naver.com</span>
           <span class="contact-item"><span class="cdot"></span>010-9658-0540</span>
           <span class="contact-item"><span class="cdot"></span>경기도 안양시</span>
         </div>
@@ -196,7 +183,6 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
     </div>
   </div>
 
-  <!-- TECH STACK -->
   <section id="stack">
     <div class="sec-label">Tech Stack</div>
     <div class="stack-grid">
@@ -207,10 +193,46 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
       <div class="sg"><div class="sg-label">CI/CD · VCS</div><div class="tags"><span class="tag">Jenkins</span><span class="tag">Git</span><span class="tag">SourceTree</span><span class="tag">Bonobo</span></div></div>
       <div class="sg"><div class="sg-label">Server · Etc</div><div class="tags"><span class="tag">IIS</span><span class="tag">Crystal Report</span><span class="tag">DevReport</span></div></div>
       <div class="sg"><div class="sg-label">PM · Comm</div><div class="tags"><span class="tag">OpenProject</span><span class="tag">Mattermost</span></div></div>
+      <div class="sg" style="border-color:rgba(251,191,36,0.25);background:rgba(251,191,36,0.04);">
+        <div class="sg-label" style="color:#fbbf24;">AI · LLM Tools</div>
+        <div class="tags">
+          <span class="tag" style="color:#fbbf24;border-color:rgba(251,191,36,0.35);background:rgba(251,191,36,0.08);">Claude AI</span>
+          <span class="tag" style="color:#fbbf24;border-color:rgba(251,191,36,0.35);background:rgba(251,191,36,0.08);">ChatGPT</span>
+          <span class="tag" style="color:#fbbf24;border-color:rgba(251,191,36,0.35);background:rgba(251,191,36,0.08);">Gemini</span>
+          <span class="tag" style="color:#fbbf24;border-color:rgba(251,191,36,0.35);background:rgba(251,191,36,0.08);">MCP Server</span>
+          <span class="tag">GitHub</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <section id="ai">
+    <div class="sec-label">AI Tools 활용</div>
+    <div class="ai-list">
+      <div class="ai-card">
+        <div class="ai-icon">⚡</div>
+        <div>
+          <div class="ai-title">스크립트 리팩토링 및 MCP SQL Server 연동 DB 최적화</div>
+          <div class="ai-desc">Claude AI + MCP Server를 활용해 MSSQL DB에 직접 연결, 기존 레거시 스크립트의 구조 리팩토링 및 코드 품질 개선에 활용. DB 구조 분석과 Stored Procedure 실행 속도 개선 작업에 적용하여 쿼리 성능 향상.</div>
+        </div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-icon">🗂️</div>
+        <div>
+          <div class="ai-title">포트폴리오 제작</div>
+          <div class="ai-desc">본 포트폴리오 웹페이지를 Claude AI를 활용하여 기획 및 제작. 경력기술서 데이터를 기반으로 구조 설계 및 디자인 구현. GitHub Pages 배포까지 AI 어시스턴트와 함께 진행.</div>
+        </div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-icon">📚</div>
+        <div>
+          <div class="ai-title">개인 학습 및 자기계발</div>
+          <div class="ai-desc">Claude AI, ChatGPT, Gemini 등 다양한 AI 툴을 활용한 개인 프로젝트 공부 진행 중. 새로운 기술 개념 학습, 코드 리뷰, 아이디어 구체화 등 업무 역량 강화에 지속적으로 활용.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="projects">
     <div class="sec-label">Projects <span style="font-size:11px;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0;margin-left:8px;">최신순 · 총 14건</span></div>
     <div class="proj-filter">
@@ -223,7 +245,6 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
     <div class="proj-list" id="projList"></div>
   </section>
 
-  <!-- EDUCATION -->
   <section id="education">
     <div class="sec-label">Education</div>
     <div class="edu-list">
@@ -242,9 +263,8 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
     </div>
   </section>
 
-  <!-- CERTS -->
   <section id="certs">
-    <div class="sec-label">Certifications & Activities</div>
+    <div class="sec-label">Certifications &amp; Activities</div>
     <div class="cert-grid">
       <div class="cert-card"><div><div class="ec-title">네트워크관리사 2급</div><div class="ec-sub">한국정보통신자격협회</div></div><div class="ec-date">2021.01</div></div>
       <div class="cert-card"><div><div class="ec-title">정보처리산업기사</div><div class="ec-sub">한국산업인력공단</div></div><div class="ec-date">2020.06</div></div>
@@ -256,80 +276,134 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
 </div>
 
 <footer>
-  <div class="wrap">전상배 · Web Developer · MES / WMS / ERP I/F Specialist · 2025</div>
+  <div class="wrap">전상배 · Web Developer · MES / WMS / ERP I/F Specialist · 2026</div>
 </footer>
 
 <script>
-const projects=[
-  {num:'01',title:'한미양행 스마트 공장 구축',period:'2025.07 ~ 진행중',contrib:'40%',types:['wms','mes'],team:'PM 1명, 개발 3명',tasks:['WMS 창고관리 및 MES 모듈 개발','칭량 및 저울 데이터 인터페이스 개발','공정별 SOP 진행 개발'],result:'팩별 재고 데이터 관리 및 공정기록서 발행'},
-  {num:'02',title:'바스칸바이오제약 스마트 공장 구축',period:'2025.04 ~ 2025.09',contrib:'50%',types:['wms','mes'],team:'PM 1명, 개발 2명',tasks:['WMS 창고관리 및 MES 모듈 개발','입고라벨 QR 코드 관리 개발','공정별 SOP 진행 개발'],result:'QR 코드 활용으로 품목 시험상태 및 수불이력 즉시 확인'},
-  {num:'03',title:'KS제약 스마트 공장 구축',period:'2024.07 ~ 2025.03',contrib:'50%',types:['wms','mes'],team:'PM 1명, 개발 3명',tasks:['WMS 창고관리 및 MES 모듈 개발','공정별 SOP 진행 개발','공정검사 및 반제품 수율 관리 개발','개별질량 및 평균질량 계산 기능 개발'],result:'수율 기록서 수기작성 폐지 → 데이터 기록서 발행 자동화'},
-  {num:'04',title:'마더스제약 스마트 공장 구축',period:'2024.06 ~ 2025.04',contrib:'50%',types:['wms','mes'],team:'PM 1명, 개발 3명',tasks:['WMS 창고관리 및 MES 모듈 개발','혼합·과립 공정 MES 진행 개발','제조지시 칭량 프로세스 개발','공정검사 설정 및 데이터 기록 개발'],result:'공정검사 기록서 발행 자동화'},
-  {num:'05',title:'명인제약 2차 창고관리 프로그램',period:'2024.03 ~ 2024.05',contrib:'60%',types:['wms','erp'],team:'PM 1명, 개발 2명',tasks:['완제품 창고관리 및 ERP 인터페이스 개발','완제품 팔레트 정보 관리 개발','팔레트·박스 라벨 QR 코드 개발','PDA 활용 완제품 창고 적치 관리 개발','완제품 재고 ERP 인터페이스 협의 및 개발'],result:'라벨 정보 QR 코드로 대체 · 시험성적 및 위치정보 QR 인식 조회'},
-  {num:'06',title:'명인제약 1차 생산 프로젝트',period:'2023.11 ~ 2024.04',contrib:'60%',types:['mes','erp'],team:'PM 1명, 개발 2명',tasks:['원료 칭량 프로세스 개발','ERP 업체 협의 진행','품목정보·BOM·생산지시·시험성적 ERP 인터페이스 개발','원료 팩 라벨 QR 코드 개발'],result:'기존 ERP 프로그램과 인터페이스 → 부서별 업무 효율 향상'},
-  {num:'07',title:'중헌제약 스마트공장 구축사업 고도화',period:'2022.09 ~ 2023.12',contrib:'50%',types:['wms','mes'],team:'PM 1명, 개발 4명',tasks:['재고 수불 관리 개발','칭량 후 인수인계 개발','공정별 반제품 인수인계 개발','포장 자재 품목 정산 개발','공정별 SOP 작업진행 개발','완제품 실적 관리 및 품목 적치 관리 개발'],result:'생산 전체 라인 프로그램 사용으로 재고 수불 관리 전면 향상'},
-  {num:'08',title:'NPK 스마트공장 구축 및 고도화',period:'2022.07 ~ 2023.10',contrib:'60%',types:['mes','erp'],team:'PM 1명, 개발 2명',tasks:['투입품목별 계산식 반영 개발','공정별 SOP 진행 개발','품목·BOM·제조지시·수불이력 ERP 인터페이스 개발','CCP 데이터 관리 개발'],result:'기존 ERP와 업무 분기하여 자료 데이터화 향상'},
-  {num:'09',title:'아리바이오 스마트공장 구축',period:'2022.07 ~ 2023.09',contrib:'40%',types:['wms','mes'],team:'PM 1명, 개발 3명',tasks:['PDA 활용 원자재·완제품 위치 관리 개발','BOM 기반 공정 투입 품목 관리 개발'],result:'창고↔현장 품목 인수인계 데이터화 · 재고 및 위치정보 디지털 전환'},
-  {num:'10',title:'대한식품 스마트 공장 구축 및 고도화',period:'2021.11 ~ 2022.11',contrib:'80%',types:['mes','mon'],team:'PM 1명, 개발 1명',tasks:['설비 데이터 모니터링 개발','식품 생산 프로세스 개발','온도 및 설비계획 관리 개발','CCP 데이터 관리 개발'],result:'수기 관리 → 데이터 모니터링 전환 · 설비 온도·투입량 대형스크린 실시간 조회'},
-  {num:'11',title:'아이센스 스마트팩토리 1단계 구축',period:'2021.10 ~ 2021.12',contrib:'30%',types:['mes'],team:'PM 1명, 개발 2명',tasks:['의약기기 생산 프로그램 구축 미팅 진행','부서별 AS-IS 분석 및 To-Be 프로세스 설계 지원','기존 솔루션과 갭분석 진행'],result:'공장별 팀 미팅 후 업무 세분화 · 설계 완료'},
-  {num:'12',title:'그린피아 현장관리 프로그램 구축',period:'2021.08 ~ 2021.11',contrib:'70%',types:['mon'],team:'PM 1명, 개발 2명',tasks:['현장 설비 PLC 업체 인터페이스 협의 및 개발','작업 진행상태 실시간 모니터링 화면 개발','카메라 인식 정보 협의 및 데이터 수집 개발','설비계획 데이터 유지보수 및 관리'],result:'현장 대형스크린 24시간 작업정보 확인 · 작업이력 데이터화 거래업체 확인증 발급'},
-  {num:'13',title:'노바렉스 스마트공장 구축 및 고도화',period:'2021.02 ~ 2021.08',contrib:'30%',types:['wms','erp'],team:'PM 1명, 개발 3명',tasks:['WMS 창고관리 모듈 개발','더존 아이큐브 ERP 미팅 지원 및 인터페이스 개발'],result:'현장 창고 관리 요청에 따라 개발 및 유지보수'},
-  {num:'14',title:'AOS 스마트팩토리 관리프로그램 구축',period:'2020.07 ~ 2021.02',contrib:'30%',types:['wms','mon'],team:'PM 1명, 개발 4명',tasks:['작업실별 온습도 모니터링 화면 개발','대형 스크린 작업·설비정보 실시간 모니터링 화면 개발','WMS 창고관리 모듈 개발'],result:'작업실별 온습도 정보 실시간 비교 및 분석'}
+var projects=[
+  {num:'01',title:'한미양행 스마트 공장 구축',period:'2025.07 ~ 진행중',contrib:'80%',types:['wms','mes'],team:'PM 1명, 개발 2명',
+   tasks:['WMS 창고관리 및 MES 모듈 개발','칭량 및 저울 데이터 인터페이스 개발','공정별 SOP 진행 개발','생산계획MRP 개발'],
+   result:'창고별 재고 데이터 관리 및 공정기록서 발행'},
+  {num:'02',title:'상상바이오 스마트 공장 구축',period:'2025.12 ~ 진행중',contrib:'60%',types:['wms','mes'],team:'PM 1명, 개발 2명',
+   tasks:['WMS 창고관리 및 MES 모듈 개발','칭량 및 저울 데이터 인터페이스 개발','공정별 SOP 진행 개발'],
+   result:'팩별 재고 데이터 관리 및 공정기록서 발행'},
+  {num:'03',title:'바스칸바이오제약 스마트 공장 구축',period:'2025.04 ~ 2025.09',contrib:'50%',types:['wms','mes'],team:'PM 1명, 개발 2명',
+   tasks:['WMS 창고관리 및 MES 모듈 개발','입고라벨 QR 코드 관리 개발','공정별 SOP 진행 개발'],
+   result:'QR 코드 활용으로 품목 시험상태 및 수불이력 즉시 확인'},
+  {num:'04',title:'KS제약 스마트 공장 구축',period:'2024.07 ~ 2025.03',contrib:'50%',types:['wms','mes'],team:'PM 1명, 개발 3명',
+   tasks:['WMS 창고관리 및 MES 모듈 개발','공정별 SOP 진행 개발','공정검사 및 반제품 수율 관리 개발','개별질량 및 평균질량 계산 기능 개발'],
+   result:'수율 기록서 수기작성 폐지 → 데이터 기록서 발행 자동화'},
+  {num:'05',title:'마더스제약 스마트 공장 구축',period:'2024.06 ~ 2025.04',contrib:'50%',types:['wms','mes'],team:'PM 1명, 개발 3명',
+   tasks:['WMS 창고관리 및 MES 모듈 개발','혼합·과립 공정 MES 진행 개발','제조지시 칭량 프로세스 개발','공정검사 설정 및 데이터 기록 개발'],
+   result:'공정검사 기록서 발행 자동화'},
+  {num:'06',title:'명인제약 2차 창고관리 프로그램',period:'2024.03 ~ 2024.05',contrib:'60%',types:['wms','erp'],team:'PM 1명, 개발 2명',
+   tasks:['완제품 창고관리 및 ERP 인터페이스 개발','완제품 팔레트 정보 관리 개발','팔레트·박스 라벨 QR 코드 개발','PDA 활용 완제품 창고 적치 관리 개발','완제품 재고 ERP 인터페이스 협의 및 개발'],
+   result:'라벨 정보 QR 코드로 대체 · 시험성적 및 위치정보 QR 인식 조회'},
+  {num:'07',title:'명인제약 1차 생산 프로젝트',period:'2023.11 ~ 2024.04',contrib:'60%',types:['mes','erp'],team:'PM 1명, 개발 2명',
+   tasks:['원료 칭량 프로세스 개발','ERP 업체 협의 진행','품목정보·BOM·생산지시·시험성적 ERP 인터페이스 개발','원료 팩 라벨 QR 코드 개발'],
+   result:'기존 ERP 프로그램과 인터페이스 → 부서별 업무 효율 향상'},
+  {num:'08',title:'중헌제약 스마트공장 구축사업 고도화',period:'2022.09 ~ 2023.12',contrib:'50%',types:['wms','mes'],team:'PM 1명, 개발 4명',
+   tasks:['재고 수불 관리 개발','칭량 후 인수인계 개발','공정별 반제품 인수인계 개발','포장 자재 품목 정산 개발','공정별 SOP 작업진행 개발','완제품 실적 관리 및 품목 적치 관리 개발'],
+   result:'생산 전체 라인 프로그램 사용으로 재고 수불 관리 전면 향상'},
+  {num:'09',title:'NPK 스마트공장 구축 및 고도화',period:'2022.07 ~ 2023.10',contrib:'60%',types:['mes','erp'],team:'PM 1명, 개발 2명',
+   tasks:['투입품목별 계산식 반영 개발','공정별 SOP 진행 개발','품목·BOM·제조지시·수불이력 ERP 인터페이스 개발','CCP 데이터 관리 개발'],
+   result:'기존 ERP와 업무 분기하여 자료 데이터화 향상'},
+  {num:'10',title:'아리바이오 스마트공장 구축',period:'2022.07 ~ 2023.09',contrib:'40%',types:['wms','mes'],team:'PM 1명, 개발 3명',
+   tasks:['PDA 활용 원자재·완제품 위치 관리 개발','BOM 기반 공정 투입 품목 관리 개발'],
+   result:'창고↔현장 품목 인수인계 데이터화 · 재고 및 위치정보 디지털 전환'},
+  {num:'11',title:'대한식품 스마트 공장 구축 및 고도화',period:'2021.11 ~ 2022.11',contrib:'80%',types:['mes','mon'],team:'PM 1명, 개발 1명',
+   tasks:['설비 데이터 모니터링 개발','식품 생산 프로세스 개발','온도 및 설비계획 관리 개발','CCP 데이터 관리 개발'],
+   result:'수기 관리 → 데이터 모니터링 전환 · 설비 온도·투입량 대형스크린 실시간 조회'},
+  {num:'12',title:'아이센스 스마트팩토리 1단계 구축',period:'2021.10 ~ 2021.12',contrib:'30%',types:['mes'],team:'PM 1명, 개발 2명',
+   tasks:['의약기기 생산 프로그램 구축 미팅 진행','부서별 AS-IS 분석 및 To-Be 프로세스 설계 지원','기존 솔루션과 갭분석 진행'],
+   result:'공장별 팀 미팅 후 업무 세분화 · 설계 완료'},
+  {num:'13',title:'그린피아 현장관리 프로그램 구축',period:'2021.08 ~ 2021.11',contrib:'70%',types:['mon'],team:'PM 1명, 개발 2명',
+   tasks:['현장 설비 PLC 업체 인터페이스 협의 및 개발','작업 진행상태 실시간 모니터링 화면 개발','카메라 인식 정보 협의 및 데이터 수집 개발','설비계획 데이터 유지보수 및 관리'],
+   result:'현장 대형스크린 24시간 작업정보 확인 · 작업이력 데이터화 거래업체 확인증 발급'},
+  {num:'14',title:'노바렉스 스마트공장 구축 및 고도화',period:'2021.02 ~ 2021.08',contrib:'30%',types:['wms','erp'],team:'PM 1명, 개발 3명',
+   tasks:['WMS 창고관리 모듈 개발','더존 아이큐브 ERP 미팅 지원 및 인터페이스 개발'],
+   result:'현장 창고 관리 요청에 따라 개발 및 유지보수'},
+  {num:'15',title:'AOS 스마트팩토리 관리프로그램 구축',period:'2020.07 ~ 2021.02',contrib:'30%',types:['wms','mon'],team:'PM 1명, 개발 4명',
+   tasks:['작업실별 온습도 모니터링 화면 개발','대형 스크린 작업·설비정보 실시간 모니터링 화면 개발','WMS 창고관리 모듈 개발'],
+   result:'작업실별 온습도 정보 실시간 비교 및 분석'}
 ];
 
-const typeLabels={mes:{label:'MES',cls:'pt-mes'},wms:{label:'WMS',cls:'pt-wms'},erp:{label:'ERP I/F',cls:'pt-erp'},mon:{label:'모니터링',cls:'pt-mon'}};
+var typeLabels={
+  mes:{label:'MES',cls:'pt-mes'},
+  wms:{label:'WMS',cls:'pt-wms'},
+  erp:{label:'ERP I/F',cls:'pt-erp'},
+  mon:{label:'모니터링',cls:'pt-mon'}
+};
 
-function renderProjects(filter='all'){
-  const list=document.getElementById('projList');
+function renderProjects(filter){
+  filter=filter||'all';
+  var list=document.getElementById('projList');
   list.innerHTML='';
-  projects.forEach((p,i)=>{
-    if(filter!=='all'&&!p.types.includes(filter))return;
-    const div=document.createElement('div');
+  for(var i=0;i<projects.length;i++){
+    var p=projects[i];
+    if(filter!=='all'&&p.types.indexOf(filter)===-1)continue;
+    var div=document.createElement('div');
     div.className='proj-card';
-    const typeTags=p.types.map(t=>`<span class="pt ${typeLabels[t].cls}">${typeLabels[t].label}</span>`).join('');
-    div.innerHTML=`
-      <div class="proj-head">
-        <div>
-          <div class="proj-num">${p.num}</div>
-          <div class="proj-title">${p.title} <span class="proj-arrow">▾</span></div>
-          <div class="proj-tags">${typeTags}</div>
-        </div>
-        <div class="proj-right">
-          <div class="proj-period">${p.period}</div>
-          <div class="contrib">${p.contrib} 기여</div>
-        </div>
-      </div>
-      <div class="proj-body" id="pb-${i}">
-        <div>
-          <div class="pb-label">주요 업무</div>
-          <ul class="pb-items">${p.tasks.map(t=>`<li>${t}</li>`).join('')}</ul>
-          <div class="team-info">${p.team}</div>
-        </div>
-        <div>
-          <div class="pb-label">성과 / 결과</div>
-          <div class="result-box">${p.result}</div>
-        </div>
-      </div>
-    `;
-    div.addEventListener('click',()=>{
-      const body=document.getElementById('pb-'+i);
-      const arrow=div.querySelector('.proj-arrow');
-      const open=body.classList.contains('open');
-      body.classList.toggle('open');
-      body.style.display=open?'none':'grid';
-      if(arrow)arrow.style.transform=open?'rotate(0deg)':'rotate(180deg)';
-    });
+    var typeTags='';
+    for(var j=0;j<p.types.length;j++){
+      var t=p.types[j];
+      typeTags+='<span class="pt '+typeLabels[t].cls+'">'+typeLabels[t].label+'</span>';
+    }
+    var taskItems='';
+    for(var k=0;k<p.tasks.length;k++){
+      taskItems+='<li>'+p.tasks[k]+'</li>';
+    }
+    div.innerHTML=
+      '<div class="proj-head">'+
+        '<div>'+
+          '<div class="proj-num">'+p.num+'</div>'+
+          '<div class="proj-title">'+p.title+' <span class="proj-arrow">&#9660;</span></div>'+
+          '<div class="proj-tags">'+typeTags+'</div>'+
+        '</div>'+
+        '<div class="proj-right">'+
+          '<div class="proj-period">'+p.period+'</div>'+
+          '<div class="contrib">'+p.contrib+' 기여</div>'+
+        '</div>'+
+      '</div>'+
+      '<div class="proj-body" id="pb-'+i+'">'+
+        '<div>'+
+          '<div class="pb-label">주요 업무</div>'+
+          '<ul class="pb-items">'+taskItems+'</ul>'+
+          '<div class="team-info">'+p.team+'</div>'+
+        '</div>'+
+        '<div>'+
+          '<div class="pb-label">성과 / 결과</div>'+
+          '<div class="result-box">'+p.result+'</div>'+
+        '</div>'+
+      '</div>';
+    (function(idx,card){
+      card.addEventListener('click',function(){
+        var body=document.getElementById('pb-'+idx);
+        var arrow=card.querySelector('.proj-arrow');
+        var isOpen=body.classList.contains('open');
+        if(isOpen){
+          body.classList.remove('open');
+          body.style.display='none';
+          if(arrow)arrow.style.transform='rotate(0deg)';
+        }else{
+          body.classList.add('open');
+          body.style.display='grid';
+          if(arrow)arrow.style.transform='rotate(180deg)';
+        }
+      });
+    })(i,div);
     list.appendChild(div);
-  });
+  }
 }
 
 function filterProj(type,btn){
-  document.querySelectorAll('.pf-btn').forEach(b=>b.classList.remove('active'));
+  var btns=document.querySelectorAll('.pf-btn');
+  for(var i=0;i<btns.length;i++)btns[i].classList.remove('active');
   btn.classList.add('active');
   renderProjects(type);
 }
 
-renderProjects();
+renderProjects('all');
 </script>
 </body>
 </html>
