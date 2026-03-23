@@ -141,6 +141,7 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
   <div class="nav-inner">
     <span class="nav-logo">JSB.dev</span>
     <div class="nav-links">
+      <a href="#career">Career</a>
       <a href="#stack">Stack</a>
       <a href="#ai" style="color:#fbbf24;">AI Tools</a>
       <a href="#projects">Projects</a>
@@ -154,7 +155,7 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
 
   <div class="hero">
     <div class="hero-top">
-      <div class="avatar">전</div>
+      <div class="avatar">JSB</div>
       <div class="hero-text">
         <div class="badge-row">
           <span class="badge badge-green">● OPEN TO WORK</span>
@@ -176,12 +177,37 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
       </div>
     </div>
     <div class="stat-row">
-      <div class="stat-card"><div class="stat-num">14</div><div class="stat-label">완료 프로젝트</div></div>
-      <div class="stat-card"><div class="stat-num">5Y+</div><div class="stat-label">개발 경력</div></div>
-      <div class="stat-card"><div class="stat-num">60%</div><div class="stat-label">평균 기여도</div></div>
-      <div class="stat-card"><div class="stat-num">3종</div><div class="stat-label">보유 자격증</div></div>
+      <div class="stat-card"><div class="stat-num" id="stat-proj">—</div><div class="stat-label">완료 프로젝트</div></div>
+      <div class="stat-card"><div class="stat-num" id="stat-career">—</div><div class="stat-label">개발 경력</div></div>
+      <div class="stat-card"><div class="stat-num" id="stat-contrib">—</div><div class="stat-label">평균 기여도</div></div>
+      <div class="stat-card"><div class="stat-num" id="stat-certs">—</div><div class="stat-label">보유 자격증</div></div>
     </div>
   </div>
+
+  <section id="career">
+    <div class="sec-label">Career</div>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="background:var(--surf);border:1px solid var(--border);border-radius:12px;padding:22px 28px;
+        display:flex;justify-content:space-between;align-items:flex-start;gap:16px;transition:border-color 0.2s;"
+        onmouseover="this.style.borderColor='rgba(107,127,255,0.3)'"
+        onmouseout="this.style.borderColor='var(--border)'">
+        <div>
+          <div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px;">(주)타스코</div>
+          <div style="font-size:13px;color:var(--accent2);font-weight:500;margin-bottom:10px;">SF팀 · 과장</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span style="font-family:'DM Mono',monospace;font-size:11px;color:#34d399;background:rgba(52,211,153,0.1);border:1px solid rgba(52,211,153,0.2);border-radius:3px;padding:2px 8px;">MES 프로세스 솔루션 개발</span>
+            <span style="font-family:'DM Mono',monospace;font-size:11px;color:#60a5fa;background:rgba(96,165,250,0.1);border:1px solid rgba(96,165,250,0.2);border-radius:3px;padding:2px 8px;">WMS 창고관리 시스템</span>
+            <span style="font-family:'DM Mono',monospace;font-size:11px;color:#f59e0b;background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.2);border-radius:3px;padding:2px 8px;">ERP I/F 개발</span>
+            <span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);background:rgba(107,127,255,0.08);border:1px solid rgba(107,127,255,0.2);border-radius:3px;padding:2px 8px;">웹 서비스 배포 및 유지보수</span>
+          </div>
+        </div>
+        <div style="text-align:right;flex-shrink:0;">
+          <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);white-space:nowrap;margin-bottom:8px;">2020.07.01 — 현재</div>
+          <span style="font-family:'DM Mono',monospace;font-size:10px;color:#4ade80;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.25);padding:3px 8px;border-radius:4px;letter-spacing:0.08em;">● 재직중</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="stack">
     <div class="sec-label">Tech Stack</div>
@@ -189,7 +215,7 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
       <div class="sg"><div class="sg-label">Language</div><div class="tags"><span class="tag hi">JavaScript</span><span class="tag hi">jQuery</span></div></div>
       <div class="sg"><div class="sg-label">Backend</div><div class="tags"><span class="tag hi">ASP.NET</span><span class="tag">C#</span></div></div>
       <div class="sg"><div class="sg-label">Frontend</div><div class="tags"><span class="tag hi">DevExtreme</span></div></div>
-      <div class="sg"><div class="sg-label">Database</div><div class="tags"><span class="tag hi">MSSQL</span><span class="tag">Oracle</span><span class="tag">DBeaver</span></div></div>
+      <div class="sg"><div class="sg-label">Database</div><div class="tags"><span class="tag hi">MSSQL</span><span class="tag">DBeaver</span><span class="tag">Oracle</span></div></div>
       <div class="sg"><div class="sg-label">CI/CD · VCS</div><div class="tags"><span class="tag">Jenkins</span><span class="tag">Git</span><span class="tag">SourceTree</span><span class="tag">Bonobo</span></div></div>
       <div class="sg"><div class="sg-label">Server · Etc</div><div class="tags"><span class="tag">IIS</span><span class="tag">Crystal Report</span><span class="tag">DevReport</span></div></div>
       <div class="sg"><div class="sg-label">PM · Comm</div><div class="tags"><span class="tag">OpenProject</span><span class="tag">Mattermost</span></div></div>
@@ -199,8 +225,6 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
           <span class="tag" style="color:#fbbf24;border-color:rgba(251,191,36,0.35);background:rgba(251,191,36,0.08);">Claude AI</span>
           <span class="tag" style="color:#fbbf24;border-color:rgba(251,191,36,0.35);background:rgba(251,191,36,0.08);">ChatGPT</span>
           <span class="tag" style="color:#fbbf24;border-color:rgba(251,191,36,0.35);background:rgba(251,191,36,0.08);">Gemini</span>
-          <span class="tag" style="color:#fbbf24;border-color:rgba(251,191,36,0.35);background:rgba(251,191,36,0.08);">MCP Server</span>
-          <span class="tag">GitHub</span>
         </div>
       </div>
     </div>
@@ -234,7 +258,7 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
   </section>
 
   <section id="projects">
-    <div class="sec-label">Projects <span style="font-size:11px;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0;margin-left:8px;">최신순 · 총 14건</span></div>
+    <div class="sec-label">Projects <span id="proj-count-label" style="font-size:11px;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0;margin-left:8px;">최신순</span></div>
     <div class="proj-filter">
       <button class="pf-btn active" onclick="filterProj('all',this)">ALL</button>
       <button class="pf-btn" onclick="filterProj('mes',this)">MES</button>
@@ -279,7 +303,7 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
   <div class="wrap">전상배 · Web Developer · MES / WMS / ERP I/F Specialist · 2026</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 var projects=[
   {num:'01',title:'한미양행 스마트 공장 구축',period:'2025.07 ~ 진행중',contrib:'80%',types:['wms','mes'],team:'PM 1명, 개발 2명',
    tasks:['WMS 창고관리 및 MES 모듈 개발','칭량 및 저울 데이터 인터페이스 개발','공정별 SOP 진행 개발','생산계획MRP 개발'],
@@ -403,7 +427,48 @@ function filterProj(type,btn){
   renderProjects(type);
 }
 
+function calcStats(){
+  /* 1. 완료 프로젝트 수 - projects 배열 최대 num 값 */
+  var maxNum=0;
+  for(var i=0;i<projects.length;i++){
+    var n=parseInt(projects[i].num,10);
+    if(n>maxNum)maxNum=n;
+  }
+  document.getElementById('stat-proj').textContent=maxNum;
+
+  /* 2. 개발 경력 - Career 시작일(2020.07.01) ~ 오늘 */
+  var start=new Date(2020,6,1);
+  var now=new Date();
+  var totalMonths=(now.getFullYear()-start.getFullYear())*12+(now.getMonth()-start.getMonth());
+  var years=Math.floor(totalMonths/12);
+  var careerStr=years+'Y+';
+  document.getElementById('stat-career').textContent=careerStr;
+
+  /* 3. 평균 기여도 - projects 기여도 평균 */
+  var total=0;
+  for(var j=0;j<projects.length;j++){
+    total+=parseInt(projects[j].contrib,10);
+  }
+  var avg=Math.round(total/projects.length);
+  document.getElementById('stat-contrib').textContent=avg+'%';
+
+  /* 4. 보유 자격증 - 네트워크관리사 2급, 정보처리산업기사만 카운트 */
+  var certTitles=['네트워크관리사 2급','정보처리산업기사'];
+  var certCards=document.querySelectorAll('#certs .cert-card');
+  var certCount=0;
+  for(var c=0;c<certCards.length;c++){
+    var titleEl=certCards[c].querySelector('.ec-title');
+    if(titleEl&&certTitles.indexOf(titleEl.textContent.trim())!==-1)certCount++;
+  }
+  document.getElementById('stat-certs').textContent=certCount+'종';
+
+  /* 5. Projects 섹션 총 건수 라벨 자동화 */
+  var projLabel=document.getElementById('proj-count-label');
+  if(projLabel)projLabel.textContent='최신순 · 총 '+maxNum+'건';
+}
+
 renderProjects('all');
+calcStats();
 </script>
 </body>
 </html>
