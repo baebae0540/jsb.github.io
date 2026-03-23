@@ -113,6 +113,9 @@ section{padding:52px 0 0;}
 .edu-card,.cert-card{background:var(--surf);border:1px solid var(--border);border-radius:10px;
   padding:16px 20px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;
   transition:border-color 0.2s;}
+  .cert-license{border-color:rgba(107,127,255,0.4);background:rgba(107,127,255,0.06);}
+.cert-license .ec-title{color:var(--accent2);}
+.cert-license .ec-date{color:var(--accent);}
 .edu-card:hover,.cert-card:hover{border-color:rgba(107,127,255,0.25);}
 .ec-title{font-size:14px;font-weight:500;color:#fff;margin-bottom:4px;}
 .ec-sub{font-size:12px;color:var(--muted);}
@@ -159,7 +162,7 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
       <div class="hero-text">
         <div class="badge-row">
           <span class="badge badge-green">● OPEN TO WORK</span>
-          <span class="badge badge-blue">5년 9개월 경력</span>
+          <span class="badge badge-blue" id="badge-career">경력</span>
           <span class="badge badge-purple">MES/WMS 전문</span>
         </div>
         <h1>전상배</h1>
@@ -290,8 +293,8 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
   <section id="certs">
     <div class="sec-label">Certifications &amp; Activities</div>
     <div class="cert-grid">
-      <div class="cert-card"><div><div class="ec-title">네트워크관리사 2급</div><div class="ec-sub">한국정보통신자격협회</div></div><div class="ec-date">2021.01</div></div>
-      <div class="cert-card"><div><div class="ec-title">정보처리산업기사</div><div class="ec-sub">한국산업인력공단</div></div><div class="ec-date">2020.06</div></div>
+      <div class="cert-card cert-license"><div><div class="ec-title">네트워크관리사 2급</div><div class="ec-sub">한국정보통신자격협회</div></div><div class="ec-date">2021.01</div></div>
+      <div class="cert-card cert-license"><div><div class="ec-title">정보처리산업기사</div><div class="ec-sub">한국산업인력공단</div></div><div class="ec-date">2020.06</div></div>
       <div class="cert-card"><div><div class="ec-title">NCS 정보처리산업기사 과정평가형</div><div class="ec-sub">KH정보교육원 종로점 · 수료</div></div><div class="ec-date">2019.11<br>— 2020.04</div></div>
       <div class="cert-card"><div><div class="ec-title">육군 병장 만기전역</div><div class="ec-sub">의무복무 성실 이행</div></div><div class="ec-date">2015.01<br>— 2016.10</div></div>
     </div>
@@ -303,7 +306,7 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
   <div class="wrap">전상배 · Web Developer · MES / WMS / ERP I/F Specialist · 2026</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 var projects=[
   {num:'01',title:'한미양행 스마트 공장 구축',period:'2025.07 ~ 진행중',contrib:'80%',types:['wms','mes'],team:'PM 1명, 개발 2명',
    tasks:['WMS 창고관리 및 MES 모듈 개발','칭량 및 저울 데이터 인터페이스 개발','공정별 SOP 진행 개발','생산계획MRP 개발'],
@@ -441,6 +444,7 @@ function calcStats(){
   var now=new Date();
   var totalMonths=(now.getFullYear()-start.getFullYear())*12+(now.getMonth()-start.getMonth());
   var years=Math.floor(totalMonths/12);
+  var months=totalMonths%12;
   var careerStr=years+'Y+';
   document.getElementById('stat-career').textContent=careerStr;
 
@@ -453,18 +457,16 @@ function calcStats(){
   document.getElementById('stat-contrib').textContent=avg+'%';
 
   /* 4. 보유 자격증 - 네트워크관리사 2급, 정보처리산업기사만 카운트 */
-  var certTitles=['네트워크관리사 2급','정보처리산업기사'];
-  var certCards=document.querySelectorAll('#certs .cert-card');
-  var certCount=0;
-  for(var c=0;c<certCards.length;c++){
-    var titleEl=certCards[c].querySelector('.ec-title');
-    if(titleEl&&certTitles.indexOf(titleEl.textContent.trim())!==-1)certCount++;
-  }
+  var certCount=document.querySelectorAll('#certs .cert-license').length;
   document.getElementById('stat-certs').textContent=certCount+'종';
 
   /* 5. Projects 섹션 총 건수 라벨 자동화 */
   var projLabel=document.getElementById('proj-count-label');
   if(projLabel)projLabel.textContent='최신순 · 총 '+maxNum+'건';
+
+  /* 6. 상단 배지 경력 자동화 */
+  var badgeCareer=document.getElementById('badge-career');
+  if(badgeCareer)badgeCareer.textContent=months>0?years+'년 '+months+'개월 경력':years+'년 경력';
 }
 
 renderProjects('all');
