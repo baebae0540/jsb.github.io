@@ -210,7 +210,7 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
           </div>
         </div>
         <div style="text-align:right;flex-shrink:0;">
-          <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);white-space:nowrap;margin-bottom:8px;">2026.05.06 — 2026.06.30</div>
+          <div class="career-period" style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);white-space:nowrap;margin-bottom:8px;">2026.05.06 — 2026.06.30</div>
           <span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);background:rgba(148,163,184,0.1);border:1px solid rgba(148,163,184,0.25);padding:3px 8px;border-radius:4px;letter-spacing:0.08em;">퇴사</span>
         </div>
       </div>
@@ -232,7 +232,7 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
           </div>
         </div>
         <div style="text-align:right;flex-shrink:0;">
-          <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);white-space:nowrap;margin-bottom:8px;">2020.07.01 — 2026.04.30</div>
+          <div class="career-period" style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);white-space:nowrap;margin-bottom:8px;">2020.07.01 — 2026.04.30</div>
           <span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);background:rgba(148,163,184,0.1);border:1px solid rgba(148,163,184,0.25);padding:3px 8px;border-radius:4px;letter-spacing:0.08em;">퇴사</span>
         </div>
       </div>
@@ -341,10 +341,6 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
     <div class="sec-label">Education</div>
     <div class="edu-list">
       <div class="edu-card">
-        <div><div class="ec-title">메가존아이티평생교육원 · 컴퓨터시스템과</div><div class="ec-sub">학사 수료 · 서울 · 주간</div><div class="ec-score">88.25 / 100</div></div>
-        <div class="ec-date">2020.08<br>— 2020.12</div>
-      </div>
-      <div class="edu-card">
         <div><div class="ec-title">한국폴리텍대학 성남캠퍼스 · 자동화시스템과</div><div class="ec-sub">전문학사 졸업 · 경기 · 주간 · 졸업작품: 아두이노 자동화 신발장</div><div class="ec-score">3.8 / 4.5</div></div>
         <div class="ec-date">2014.03<br>— 2019.02</div>
       </div>
@@ -361,6 +357,8 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
       <div class="cert-card cert-license"><div><div class="ec-title">네트워크관리사 2급</div><div class="ec-sub">한국정보통신자격협회</div></div><div class="ec-date">2021.01</div></div>
       <div class="cert-card cert-license"><div><div class="ec-title">정보처리산업기사</div><div class="ec-sub">한국산업인력공단</div></div><div class="ec-date">2020.06</div></div>
 	  <div class="cert-card cert-license"><div><div class="ec-title">2종보통운전면허</div><div class="ec-sub">경찰청(운전면허시험관리단)</div></div><div class="ec-date">2014.12</div></div>
+      <div class="cert-card"><div><div class="ec-title">AI 엔지니어 입문 · 데이터 가공</div><div class="ec-sub">패스트캠퍼스 · 수료</div></div><div class="ec-date">2026.09<br>— 2026.10</div></div>
+      <div class="cert-card"><div><div class="ec-title">메가존아이티평생교육원 · 컴퓨터시스템과</div><div class="ec-sub">학사 수료 · 서울 · 주간</div><div class="ec-score">88.25 / 100</div></div><div class="ec-date">2020.08<br>— 2020.12</div></div>
       <div class="cert-card"><div><div class="ec-title">NCS 정보처리산업기사 과정평가형</div><div class="ec-sub">KH정보교육원 종로점 · 수료</div></div><div class="ec-date">2019.11<br>— 2020.04</div></div>
       <div class="cert-card"><div><div class="ec-title">육군 병장 만기전역</div><div class="ec-sub">의무복무 성실 이행</div></div><div class="ec-date">2015.01<br>— 2016.10</div></div>
     </div>
@@ -506,10 +504,16 @@ function calcStats(){
   }
   document.getElementById('stat-proj').textContent=maxNum;
 
-  /* 2. 개발 경력 - Career 시작일(2020.07.01) ~ 오늘 */
-  var start=new Date(2020,6,1);
-  var now=new Date();
-  var totalMonths=(now.getFullYear()-start.getFullYear())*12+(now.getMonth()-start.getMonth());
+  /* 2. 개발 경력 - Career 섹션 각 회사 근무기간(YYYY.MM.DD — YYYY.MM.DD) 합산 */
+  var totalMonths=0;
+  var periods=document.querySelectorAll('#career .career-period');
+  for(var p=0;p<periods.length;p++){
+    var d=periods[p].textContent.match(/(\d{4})\.(\d{2})\.(\d{2})\D+(\d{4})\.(\d{2})\.(\d{2})/);
+    if(!d)continue;
+    /* 시작월~종료월을 모두 포함한 개월 수 (예: 2026.05 ~ 2026.06 = 2개월) */
+    var m=(+d[4]-+d[1])*12+(+d[5]-+d[2])+1;
+    totalMonths+=Math.max(m,0);
+  }
   var years=Math.floor(totalMonths/12);
   var months=totalMonths%12;
   var careerStr=years+'Y+';
