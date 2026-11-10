@@ -311,7 +311,32 @@ footer{border-top:1px solid var(--border);margin-top:60px;padding:28px 0;
 
   <section id="sideproject">
     <div class="sec-label">Side Project · 개인 프로젝트</div>
-    <a href="projects/interface-watchdog/" style="display:block;text-decoration:none;color:inherit;
+    <a href="projects/careerlog/index.html" style="display:block;text-decoration:none;color:inherit;margin-bottom:16px;
+       background:var(--surf);border:1px solid rgba(74,222,128,0.25);border-radius:12px;padding:24px 28px;
+       transition:border-color 0.2s,background 0.2s;"
+       onmouseover="this.style.borderColor='rgba(74,222,128,0.5)';this.style.background='var(--surf2)'"
+       onmouseout="this.style.borderColor='rgba(74,222,128,0.25)';this.style.background='var(--surf)'">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:240px;">
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+            <span style="font-size:11px;padding:2px 7px;border-radius:3px;font-family:'DM Mono',monospace;color:#4ade80;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.25);">Web App</span>
+            <span style="font-size:11px;padding:2px 7px;border-radius:3px;font-family:'DM Mono',monospace;color:#fbbf24;background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.25);">AI-Assisted</span>
+            <span style="font-size:11px;padding:2px 7px;border-radius:3px;font-family:'DM Mono',monospace;color:#60a5fa;background:rgba(96,165,250,0.1);border:1px solid rgba(96,165,250,0.2);">Next.js 16</span>
+          </div>
+          <div style="font-size:17px;font-weight:500;color:#fff;margin-bottom:8px;">CareerLog · 이직 활동 기록 웹앱</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.75;max-width:560px;">
+            지원 회사·진행 상황·면접 일정을 한곳에 모으고 주간·월간 달력과 통계로 흐름을 보는 웹앱.
+            CTE 단일 문장으로 원자성 확보, 계정 id 타입 강제로 데이터 격리, 라이브러리 없는 SVG 차트를 직접 설계.
+          </div>
+          <div class="team-info" style="margin-top:12px;">단독 개발 · Claude Code 활용 · TypeScript / PostgreSQL / Vercel</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0;">
+          <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-bottom:10px;">2026.11 · 라이브 데모</div>
+          <span style="font-family:'DM Mono',monospace;font-size:12px;color:var(--green);font-weight:500;">자세히 보기 →</span>
+        </div>
+      </div>
+    </a>
+    <a href="projects/interface-watchdog/index.html" style="display:block;text-decoration:none;color:inherit;
        background:var(--surf);border:1px solid rgba(74,222,128,0.25);border-radius:12px;padding:24px 28px;
        transition:border-color 0.2s,background 0.2s;"
        onmouseover="this.style.borderColor='rgba(74,222,128,0.5)';this.style.background='var(--surf2)'"
